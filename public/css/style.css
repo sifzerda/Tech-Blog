@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Ramabhadra&family=Vazirmatn:wght@100..900&display=swap');
+
+:root {
+  --dark: #1f0102;
+  --light: #ebf7de;
+}
+
+header,
+.project:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+
+body {
+  background-color: var(--light);
+}
+
+.no-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #1b89bc;
+  text-decoration: none;
+  font-size: 100%;
+}
+
+.no-button:hover {
+  color: #065b83;
+  text-decoration: underline;
+}
+
+.dollar-amount {
+  color: #056605;
+  font-weight: bold;
+  margin-left: -5px;
+}
+
+.container.container {
+  width: 100%;
+  background-color: var(--light);
+}
+
+ul.nav.nav-tabs {
+  padding: 15px;
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: #796c6c;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.btn.btn-primary-signup {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: #796c6c;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.btn:hover {
+  color: #ffffff;
+  background-color: rgb(104, 83, 83);
+}
+
+.btn-outline-success {
+  color: var(--light);
+}
+
+.btn-outline-success:hover {
+  color: var(--light);
+  border-color: var(--light);
+}
+
+a.logon {
+  padding: 15px;
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+a.logon:hover {
+  padding: 15px;
+  background-color: var(--dark);
+  color: var(--light);
+  border: solid 2px;
+  border-color: var(--light);
+  border-radius: 5px;
+  background-color: rgb(104, 83, 83);
+}
+
+.bg-light {
+  background-color: var(--dark) !important;
+}
+
+h1.main-title {
+  color: var(--dark);
+  background-color: var(--light);
+  font-family: "Vazirmatn", sans-serif;
+  font-weight: bold;
+  padding: 8px;
+  width: 250px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 7px 7px rgb(151, 151, 151);
+}
+
+div.row.mb-4.project {
+  border: solid 4px;
+  border-color: var(--dark);
+  background-color: var(--light);
+}
+
+h2.headbar {
+  width: 100%;
+  background-color: var(--dark);
+  padding: 7px;
+  color: var(--light)
+}
+
+a.headbar {
+  width: 100%;
+  background-color: var(--dark);
+  padding: 6px;
+  border-radius: 4px;
+  color: var(--light)
+}
+
+p.headbar {
+  padding: 10px
+}
+
+
+span.creator {
+  color: whitesmoke;
+  font-size: 50%;
+}
+
+h2.loginheadbar {
+  width: 100%;
+  background-color: var(--dark);
+  padding: 6px;
+  color: var(--light)
+}
+
+div#login-box {
+border: black solid 2px
+}
+
+form.form.login-form,
+form.form.signup-form {
+padding: 20px
+}
+
+label {
+  font-weight: bold
+}
+
+.btn.btn-primary-signup,
+.btn.btn-primary {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #ff5252;
+  border: 2px solid #000;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px #000;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn.btn-primary-signup:hover,
+.btn.btn-primary:hover {
+  background-color: #fff;
+  color: #ff5252;
+  border: 2px solid #ff5252;
+  box-shadow: 5px 5px 0px #ff5252;
+}
+
+.btn.btn-primary-signup:active,
+.btn.btn-primary:active {
+  background-color: #255dd6;
+  color: white;
+  border: 3px solid #3fb9d8;
+  box-shadow: none;
+  transform: translateY(4px);
+}
+
+.no-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #1b89bc;
+  text-decoration: none;
+  font-size: 100%;
+}
+
+a.switch-ref {
+  align-items: center;
+  appearance: none;
+  background-color: #EEF2FF;
+  border-radius: 8px;
+  border-width: 2px;
+  border-color: #536DFE;
+  box-shadow: rgba(83, 109, 254, 0.2) 0 2px 4px, rgba(83, 109, 254, 0.15) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #3d68c5;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "Vazirmatn", sans-serif;
+  height: 56px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 24px;
+  padding-right: 24px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+}
+
+a.switch-ref:focus {
+  outline: none;
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(83, 109, 254, 0.4) 0 2px 4px, rgba(83, 109, 254, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+a.switch-ref:hover {
+  box-shadow: rgba(83, 109, 254, 0.3) 0 4px 8px, rgba(83, 109, 254, 0.2) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+a.switch-ref:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
