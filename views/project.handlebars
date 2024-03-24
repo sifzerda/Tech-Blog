@@ -1,17 +1,33 @@
 <div class="row mb-4 project">
   <h2 class="headbar">
-    <!-- Call helper function with triple brackets to render the emoji span as HTML -->
     {{name}}
     <span class="creator" style="float:right">Created by {{user.name}} on {{format_date date_created}}</p></span>
   </h2>
   <p class="headbar">{{description}}</p>
-  <!-- Pass user_id value to the helper function -->
+
+
+
+
+  <p><button class="btn btn-primary">Leave a Comment</button></p>
+</div>
+
+
+<!-- comments -->
+
+
+
+
+<div class="row mb-4 project">
+  <h2 class="headbar"></h2>
+  <p class="headbar">{{comment.text}}</p>
+
+
   <p>
-    <button class="btn btn-primary">Leave a Comment</button>
+    &mdash; {{user.name}}, {{format_date date_created}}
   </p>
+
 
 </div>
 
 
-
-
+<!-- comments -->
