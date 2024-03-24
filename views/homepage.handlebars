@@ -1,34 +1,27 @@
-
 <!-- Loop over each object in the projects array -->
 {{#each projects as |project| }}
 <div class="row mb-4 project">
-    <h2 class="headbar">
-      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-      <a class="headbar" href="/project/{{project.id}}">{{project.name}}</a>
-      <span class="creator" style="float:right">Created by {{project.user.name}} on {{format_date project.date_created}}</p></span>
-    </h2>
-            <!-- Pass user_id value to the helper function -->
-    
-    <p class="headbar">
-      {{project.description}}
-    </p>
-   
-   {{#each project.comments as |comment|}}
-    <!--comment -->
-    <p class="comment-form">{{comment.text}}</p>
-    <!---=========-->
-{{/each}}
+  <h2 class="headbar">
+    <!-- Call helper function with triple brackets to render the emoji span as HTML -->
+    <a class="headbar" href="/project/{{project.id}}">{{project.name}}</a>
+    <span class="creator" style="float:right">Created by {{project.user.name}} on {{format_date project.date_created}}
+      </p></span>
+  </h2>
+  <!-- Pass user_id value to the helper function -->
+
+  <p class="headbar">
+    {{project.description}}
+  </p>
+
+  
+  <!--comment -->
+  {{#each project.comments as |comment|}}
+
+  <p class="comment-form">{{comment.text}}</p>
+
+  {{/each}}
+  <!---=========-->
+
 
 </div>
 {{/each}}
-
-
-
-
-
-
-
-
-
-
-
