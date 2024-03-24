@@ -2,15 +2,15 @@ const newFormHandler = async (event) => {
   event.preventDefault();
 
   const name = document.querySelector('#project-name').value.trim();
-  const user_id = document.querySelector('#project-funding').value.trim();
+  const scribe = document.querySelector('#project-scribe').value.trim();
   const description = document.querySelector('#project-desc').value.trim();
 
 // fetch user's projects/posts
 
-  if (name && user_id && description) {
+  if (name && scribe && description) {
     const response = await fetch(`/api/projects`, {
       method: 'POST',
-      body: JSON.stringify({ name, user_id, description }),
+      body: JSON.stringify({ name, scribe, description }),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -24,7 +24,7 @@ const newFormHandler = async (event) => {
   }
 };
 
-// delete a post/project
+// delete a post/project ================================================= //
 
 const delButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {

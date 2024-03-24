@@ -6,19 +6,19 @@
 
 <div class="row mt-4">
   <div class="col-md-6">
-    <h3>Create a New Project:</h3>
+    <h2 class="headbar">Create a New Post</h2>
 
     <form class="form new-project-form">
       <div class="form-group">
-        <label for="project-name">project name:</label>
+        <label for="project-name">Post title:</label>
         <input class="form-input" type="text" id="project-name" name="project-name" />
       </div>
       <div class="form-group">
-        <label for="project-funding">needed funding ($):</label>
-        <input class="form-input" type="number" id="project-funding" name="project-funding" />
+        <label for="project-scribe">needed funding:</label>
+        <input class="form-input" type="text" id="project-scribe" name="project-scribe" />
       </div>
       <div class="form-group">
-        <label for="project-desc">description:</label>
+        <label for="project-desc">Write your post:</label>
         <textarea class="form-input" id="project-desc" name="project-desc"></textarea>
       </div>
       <div class="form-group">
@@ -29,7 +29,7 @@
 
   {{#if projects.length}}
   <div class="col-md-6 project-list">
-    <h3>Current Projects:</h3>
+    <h3>Current Posts:</h3>
 
     {{#each projects as |project|}}
     <div class="row mb-2">
