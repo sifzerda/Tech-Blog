@@ -2,15 +2,14 @@ const newFormHandler = async (event) => {
   event.preventDefault();
 
   const name = document.querySelector('#project-name').value.trim();
-  const scribe = document.querySelector('#project-scribe').value.trim();
   const description = document.querySelector('#project-desc').value.trim();
 
 // fetch user's projects/posts
 
-  if (name && scribe && description) {
+  if (name && description) {
     const response = await fetch(`/api/projects`, {
       method: 'POST',
-      body: JSON.stringify({ name, scribe, description }),
+      body: JSON.stringify({ name, description }),
       headers: {
         'Content-Type': 'application/json',
       },
