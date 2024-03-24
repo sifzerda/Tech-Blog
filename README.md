@@ -29,7 +29,11 @@ https://drive.google.com/file/d/15PPt4-SlKyVD8vsvZBR_J16PFBeR8vTc/view?usp=drive
 
 CODE EDITOR TERMINAL:
 
-- Enter your mysql password into the .env file
+- create an .env file in the directory and paste:
+DB_NAME='blog_db'
+DB_PASSWORD=' '      <----- enter your mysql password into here 
+DB_USER='root'
+
 - npm install i
 - mysql -u root –p
 - SOURCE db/schema.sql
