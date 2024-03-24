@@ -26,8 +26,22 @@
     &mdash; {{user.name}}, {{format_date date_created}}
   </p>
 
-
 </div>
 
 
 <!-- comments -->
+
+
+<div class="row mb-4 project">
+
+    <h2 class="headbar">Create a New Comment</h2>
+
+    <form class="form new-comment-form">
+
+      <div class="form-group">
+        <textarea class="form-input" id="comment-desc" name="comment-desc"></textarea>
+      </div>
+      <div class="form-group">
+        <button id="createNewComment" button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
