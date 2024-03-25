@@ -1,12 +1,13 @@
 const newCommentHandler = async (event) => {
   event.preventDefault();
 
-  const text = document.querySelector('#comment-desc').value.trim();
+  const text = document.querySelector('#comment-desc').value;
 
   // user's comments
 
   if (text) {
-    const response = await fetch(`/api/comments`, {
+    console.log(text)
+    const response = await fetch(`/commentRoutes`, {
       method: 'POST',
       body: JSON.stringify({ text }),
       headers: {

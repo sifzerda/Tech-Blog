@@ -52,7 +52,8 @@ router.post('/', withAuth, async (req, res) => {
         project_id: req.body.project_id,
         text: req.body.text
       //  date_created: req.body.date_created
-      });    
+      });   
+      console.log(dbCommentData) 
       res.status(200).json(dbCommentData);
     } catch (err) {
       console.log('failed to make comment')
