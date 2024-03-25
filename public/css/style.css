@@ -141,6 +141,18 @@ p.headbar {
   padding: 10px
 }
 
+.card .card-header {
+  padding: 0.375rem;
+  background-color: var(--dark);
+  color: #d9e9e8;
+}
+
+.card {
+  border: 2px solid #1a1a1a;
+  margin-bottom: 1rem;
+  background-color: var(--light);
+  border-radius: 5px;
+}
 
 span.creator {
   color: whitesmoke;

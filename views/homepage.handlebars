@@ -2,7 +2,6 @@
 {{#each projects as |project| }}
 <div class="row mb-4 project">
   <h2 class="headbar">
-    <!-- Call helper function with triple brackets to render the emoji span as HTML -->
     <a class="headbar" href="/project/{{project.id}}">{{project.name}}</a>
     <span class="creator" style="float:right">Created by {{project.user.name}} on {{format_date project.date_created}}
       </p></span>
@@ -25,3 +24,5 @@
 
 </div>
 {{/each}}
+
+

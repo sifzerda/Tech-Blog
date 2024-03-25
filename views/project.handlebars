@@ -8,7 +8,28 @@
 </div>
 
 
-<!-- comments -->
+<!-- display comments -->
+  {{#each comments as |comment|}}
+<div class="card">
+    <div class="card-header">
+    </div>
+        <p class="headbar">{{comment.text}} <br> &mdash; [comment author], and [date created]</p>
+</div>
+  {{/each}}
+
+</div>
+
+
+
+
+
+
+  <!---=========-->
+
+
+
+
+
 
 
 
@@ -25,7 +46,10 @@
 </div>
 
 
-<!-- comments -->
+
+
+
+<!-- Create a new comment -->
 
 
 <div class="row mb-4 project">
