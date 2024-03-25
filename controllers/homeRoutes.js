@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
         },
         {
           model: Comment,
-          attributes: ['text'],
+          attributes: ['id', 'text', 'project_id', 'user_id', 'date_created'],
           include: {
             model: User,
             attributes: ['name'],
@@ -24,7 +24,7 @@ router.get('/', async (req, res) => {
 
     // Serialize data so the template can read it
     const projects = projectData.map((project) => project.get({ plain: true }));
-console.log(projects)
+    console.log(projects)
     // Pass serialized data and session flag into template
     res.render('homepage', {
       projects,
@@ -47,7 +47,7 @@ router.get('/project/:id', async (req, res) => {
         },
         {
           model: Comment,
-          attributes: ['text'],
+          attributes: ['id', 'text', 'project_id', 'user_id', 'date_created'],
         },
       ],
     });
@@ -62,13 +62,6 @@ router.get('/project/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
-
-
-
-
-
-
 
 
 // =========================== Logging in ====================== //
@@ -110,7 +103,44 @@ router.get('/login', (req, res) => {
 // ===== signup page ==== //
 
 router.get('/signup', (req, res) => {
-res.render('signup');
+  res.render('signup');
+});
+
+
+
+// ====================================== get comments ============================ //
+
+router.get('/project-comments', async (req, res) => {
+
+  try {
+    const commentData = await Project.findOne({
+      where: { id: req.params.id },
+      attributes: [
+        'id',
+        'name',
+        'description',
+        'date_created',
+      ],
+      include: [{
+        model: Comment,
+        attributes: ['id', 'text', 'project_id', 'user_id', 'date_created'],
+        include: {
+          model: User,
+          attributes: ['name']
+        }
+      },
+      {
+        model: User,
+        attributes: ['name']
+      }
+      ]
+    });
+    console.log(commentData)
+    const project = commentData.get({ plain: true });
+    res.render('project-comments', {...project, logged_in: req.session.logged_in});
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 

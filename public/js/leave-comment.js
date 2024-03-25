@@ -1,14 +1,14 @@
-const newFormHandler = async (event) => {
+const newCommentHandler = async (event) => {
   event.preventDefault();
 
-  const text = document.querySelector('#project-name').value.trim();
+  const text = document.querySelector('#comment-desc').value.trim();
 
   // user's comments
 
   if (text) {
     const response = await fetch(`/api/comments`, {
       method: 'POST',
-      body: JSON.stringify({ text, project_id }),
+      body: JSON.stringify({ text }),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -24,7 +24,9 @@ const newFormHandler = async (event) => {
 };
 
 document
-  .querySelector('.comment-form')
+  .querySelector('.new-comment-form')
   .addEventListener('submit', newCommentHandler);
+
+
 
 
