@@ -4,44 +4,44 @@ const withAuth = require('../../utils/auth');
 
 // ============================== GET all Comments ============================ //
 
-//router.get('/', async (req, res) => {
-//    console.log('test get all comments');
- //   try {
- //     const dbCommentData = await Comment.findAll({
- //       where: {
- //           id: req.params.id
- //       }
- //     });
- //     res.status(200).json(dbCommentData);
- //   } catch (err) {
- //     console.log(err);
- //     res.status(500).json(err);
- //   }
- // });
+router.get('/', async (req, res) => {
+    console.log('test get all comments');
+    try {
+      const dbCommentData = await Comment.findAll({
+        where: {
+            id: req.params.id
+        }
+      });
+      res.status(200).json(dbCommentData);
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+  });
 
 // ============================== GET one comment by id ============================ //
 
-// router.get('/:id', async (req, res) => {
-//    try {
-//      const dbCommentData = await Comment.findOne({
-//       where: {
-//          id: req.params.id
-//        },
-//        attributes: [
-//          'id', 
-//          'text', 
-//          'date_created', 
-//          'project_id',
-//          'user_id'
-//        ],
-//      });
-//      res.status(200).json(dbCommentData);
-//    } catch (err) {
-//      console.log(err);
-//      res.status(500).json(err);
-//   }
-//  }
-// );
+ router.get('/:id', async (req, res) => {
+    try {
+      const dbCommentData = await Comment.findOne({
+       where: {
+          id: req.params.id
+        },
+        attributes: [
+          'id', 
+          'text', 
+          'date_created', 
+          'project_id',
+          'user_id'
+        ],
+      });
+      res.status(200).json(dbCommentData);
+    } catch (err) {
+      console.log(err);
+     res.status(500).json(err);
+   }
+  }
+ );
 
 // ============================== Create a comment ============================ //
 
