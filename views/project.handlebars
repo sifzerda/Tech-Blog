@@ -13,12 +13,11 @@
 <div class="card">
     <div class="card-header">
     </div>
-        <p class="headbar">{{comment.text}} <br> &mdash; [comment author], and [date created]</p>
+        <p class="headbar">{{comment.text}} <br> &mdash; {{../user.name}} on {{format_date date_created}} </p>
 </div>
   {{/each}}
 
 </div>
-
 
 
 
@@ -36,7 +35,7 @@
 
 <div class="row mb-4 project">
   <h2 class="headbar"></h2>
-  <p class="headbar">{{comment.text}}</p>
+  <p class="headbar"></p>
 
 
   <p>
