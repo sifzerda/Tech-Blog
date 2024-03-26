@@ -2,10 +2,14 @@ const router = require('express').Router();
 const { Project, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
+
+// ============== Get all projects and JOIN with user data ============= //
+
 router.get('/', async (req, res) => {
   try {
-    // Get all projects and JOIN with user data
+
     const projectData = await Project.findAll({
+      attributes: ['id', 'name', 'description', 'date_created'],
       include: [
         {
           model: User,
@@ -35,11 +39,12 @@ router.get('/', async (req, res) => {
   }
 });
 
-// get posts/projects by id
+// ============== get posts/projects by id ============= //
 
 router.get('/project/:id', async (req, res) => {
   try {
-    const projectData = await Project.findByPk(req.params.id, {
+    const projectData = await Project.findOne({
+      where: { id: req.params.id },
       include: [
         {
           model: User,
@@ -48,6 +53,10 @@ router.get('/project/:id', async (req, res) => {
         {
           model: Comment,
           attributes: ['id', 'text', 'project_id', 'user_id', 'date_created'],
+          include: {
+            model: User,
+            attributes: ['name'],
+          }
         },
       ],
     });
@@ -58,6 +67,35 @@ router.get('/project/:id', async (req, res) => {
       ...project,
       logged_in: req.session.logged_in
     });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// ============== get all posts' comments ============= //
+
+router.get('/comments', async (req, res) => {
+  try {
+    const commentData = await Project.findOne({
+      where: { id: req.params.id },
+      attributes: ['id', 'name', 'description', 'date_created'],
+      include: [{
+        model: Comment,
+        attributes: ['id', 'text', 'project_id', 'user_id', 'date_created'],
+        include: {
+          model: User,
+          attributes: ['name']
+        }
+      },
+      {
+        model: User,
+        attributes: ['name']
+      }
+      ]
+    });
+    console.log(commentData)
+    const project = commentData.get({ plain: true });
+    res.render('comments', { ...project, logged_in: req.session.logged_in });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -105,43 +143,5 @@ router.get('/login', (req, res) => {
 router.get('/signup', (req, res) => {
   res.render('signup');
 });
-
-
-
-// ====================================== get comments ============================ //
-
-router.get('/project-comments', async (req, res) => {
-
-  try {
-    const commentData = await Project.findOne({
-      where: { id: req.params.id },
-      attributes: [
-        'id',
-        'name',
-        'description',
-        'date_created',
-      ],
-      include: [{
-        model: Comment,
-        attributes: ['id', 'text', 'project_id', 'user_id', 'date_created'],
-        include: {
-          model: User,
-          attributes: ['name']
-        }
-      },
-      {
-        model: User,
-        attributes: ['name']
-      }
-      ]
-    });
-    console.log(commentData)
-    const project = commentData.get({ plain: true });
-    res.render('project-comments', {...project, logged_in: req.session.logged_in});
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
 
 module.exports = router;
