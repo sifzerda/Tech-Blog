@@ -144,4 +144,43 @@ router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
+// ============== get posts/projects by id to update ============= //
+
+router.get('/update-post/:id', async (req, res) => {
+  try {
+    const projectData = await Project.findOne({
+      where: { id: req.params.id },
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        },
+        {
+          model: Comment,
+          attributes: ['id', 'text', 'project_id', 'user_id', 'date_created'],
+          include: {
+            model: User,
+            attributes: ['name'],
+          }
+        },
+      ],
+    });
+
+    const project = projectData.get({ plain: true });
+
+    res.render('update-post', {
+      ...project,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// ===== update post page ==== //
+
+//router.get('/update-post', (req, res) => {
+ // res.render('update-post');
+//});
+
 module.exports = router;
