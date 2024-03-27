@@ -73,7 +73,7 @@ async function updateFormHandler(event) {
   }
 };
 
-document.querySelector('.update-project-form').addEventListener('submit', updateFormHandler);
+//document.querySelector('.update-project-form').addEventListener('submit', updateFormHandler);
 
 
 // ============ //
