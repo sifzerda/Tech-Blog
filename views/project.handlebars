@@ -9,17 +9,17 @@
 
 
 <!-- display comments -->
-  {{#each comments as |comment|}}
+{{#each comments as |comment|}}
 <div class="card">
-    <div class="card-header">
-    </div>
-        <p class="headbar">{{comment.text}} <br> &mdash; {{../user.name}} on {{format_date date_created}} </p>
+  <div class="card-header">
+  </div>
+  <p class="headbar">{{comment.text}} <br> &mdash; {{../user.name}} on {{format_date date_created}} </p>
 </div>
-  {{/each}}
+{{/each}}
 
 </div>
 
-  <!---=========-->
+<!---=========-->
 
 <!-- <div class="row mb-4 project">
   <h2 class="headbar"></h2>
@@ -32,21 +32,25 @@
 
 <!-- ============================== Create a new comment ========================  -->
 
+<!-- Conditionally render create a comment box -->
 
 <div class="row mb-4 project">
+  <h2 class="headbar">Leave a Comment!</h2>
 
-    <h2 class="headbar">Create a New Comment</h2>
+  {{#if logged_in}}
+  <form class="form new-comment-form">
+    <div class="form-group">
+      <textarea class="form-input" id="comment-desc" name="comment-desc"></textarea>
+    </div>
 
-    <form class="form new-comment-form">
+    <div class="form-group">
+      <button id="createNewComment" button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+  {{else}}
+  <p class="headbar">To leave a comment, please sign up and/or log into your account</p>
+  {{/if}}
 
-      <div class="form-group">
-        <textarea class="form-input" id="comment-desc" name="comment-desc"></textarea>
-      </div>
-      <div class="form-group">
-        <button id="createNewComment" button type="submit" class="btn btn-primary">Submit</button>
-      </div>
-    </form>
+  <!-- js script -->
 
-<!-- js script -->
-
-<script src="/js/leave-comment.js"></script>
+  <script src="/js/leave-comment.js"></script>

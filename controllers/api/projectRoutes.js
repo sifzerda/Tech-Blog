@@ -58,6 +58,8 @@ res.render(`update-post`, { project, loggedIn: true, username: req.session.usern
     res.status(500).json(err);
   }
 });
+
+
 router.get(`/new-post`, withAuth, (req, res) => {
   res.render('update-post', { name: req.session.name });
 });

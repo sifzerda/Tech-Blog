@@ -183,4 +183,10 @@ router.get('/update-post/:id', async (req, res) => {
  // res.render('update-post');
 //});
 
+// ======== creates new URL page, and links to handlebars document
+
+//router.get(`/new-comment`, withAuth, (req, res) => {
+//  res.render('create-comment', { name: req.session.name });
+//});
+
 module.exports = router;
