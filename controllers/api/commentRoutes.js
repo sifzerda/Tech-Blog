@@ -58,7 +58,7 @@ router.post('/', withAuth, async (req, res) => {
   } catch (err) {
     console.log('failed to make comment')
     res.status(400).json(err);
-  }
+  };
 });
 
 
