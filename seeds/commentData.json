@@ -1,19 +1,19 @@
 [
   {
     "id": 1,
-    "text": "Thanks, very informative!",
+    "text": "Great, very informative post, thanks for sharing!",
     "project_id": 1,
     "user_id": 3
   },
   {
     "id": 2,
-    "text": "Thumbs up!",
+    "text": "Really nice article and helpful to me. Great work.",
     "project_id": 2,
     "user_id": 2
   },
   {
     "id": 3,
-    "text": "I agree",
+    "text": "Nice post, looking forward to the next one",
     "project_id": 3,
     "user_id": 1
   }
