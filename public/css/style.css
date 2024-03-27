@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Ramabhadra&family=Vazirmatn:wght@100..900&display=swap');
 
 :root {
-  --dark: #1f0102;
-  --light: #ebf7de;
+  --dark: #111343;
+  --light: #92ff71;
 }
 
 header,
@@ -12,6 +12,7 @@ header,
 
 body {
   background-color: var(--light);
+  overflow-x: hidden;
 }
 
 .no-button {
@@ -20,17 +21,17 @@ body {
   cursor: pointer;
   text-decoration: none;
   font-size: 100%;
-  padding: 15px!important;
-  background-color: var(--dark)!important;
-  color: var(--light)!important
+  padding: 15px !important;
+  background-color: var(--dark) !important;
+  color: var(--light) !important
 }
 
 .no-button:hover {
   text-decoration: underline;
   padding: 15px;
-  color: var(--light)!important;
+  color: var(--light) !important;
   border: solid 2px;
-  border-color: var(--light)!important;
+  border-color: var(--light) !important;
   border-radius: 5px;
   background-color: rgb(104, 83, 83);
 }
@@ -167,12 +168,12 @@ h2.loginheadbar {
 }
 
 div#login-box {
-border: black solid 2px
+  border: black solid 2px
 }
 
 form.form.login-form,
 form.form.signup-form {
-padding: 20px
+  padding: 20px
 }
 
 label {
@@ -240,16 +241,16 @@ a.switch-ref {
 }
 
 a.switch-ref:hover {
-  background-color:  #51dcff;
-  border: 2px solid  #bbff00;
-  color:   #bbff00;
+  background-color: #51dcff;
+  border: 2px solid #bbff00;
+  color: #bbff00;
 
   box-shadow: 5px 5px 0px #817a7a;
 }
 
 a.switch-ref:active {
   background-color: #ffffff;
-  color:  #255dd6;
+  color: #255dd6;
   border: 3px solid #3fb9d8;
   border: 2px solid #000;
   box-shadow: none;
@@ -257,9 +258,68 @@ a.switch-ref:active {
 }
 
 form.form.new-comment-form {
-padding: 20px
+  padding: 20px
 }
 
 textarea#comment-desc.form-input:focus {
-border:solid  #ff5252;
+  border: solid #ff5252;
+}
+
+/* ============ footer ============ */
+
+.footer {
+  background: var(--dark);
+  padding: 30px 0px;
+  font-family: 'Play', sans-serif;
+  text-align: center;
+
+}
+
+.footer .row {
+  width: 100%;
+  margin: 1% 0%;
+  padding: 0.6% 0%;
+  color: var(--light);
+  font-size: 1em;
+}
+
+.footer .row a {
+  text-decoration: none;
+  color: var(--light);
+  transition: 0.5s;
+}
+
+.footer .row a:hover {
+  color: #fff;
+}
+
+.footer .row ul {
+  width: 100%;
+}
+
+.footer .row ul li {
+  display: inline-block;
+  margin: 0px 30px;
+}
+
+.footer .row a i {
+  font-size: 2em;
+  margin: 0% 1%;
+}
+
+@media (max-width:720px) {
+  .footer {
+    text-align: left;
+    padding: 5%;
   }
+
+  .footer .row ul li {
+    display: block;
+    margin: 10px 0px;
+    text-align: left;
+  }
+
+  .footer .row a i {
+    margin: 0% 3%;
+  }
+}
