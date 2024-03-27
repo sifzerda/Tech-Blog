@@ -41,15 +41,29 @@ CODE EDITOR TERMINAL:
 - npm run seed
 - npm run watch or npm run start
 
+Pre-made accounts for logging in debugging purposes:
+
+    email: sal@hotmail.com
+    password: password12345
+
+    email: lernantino@gmail.com
+    password: password12345
+
+    email: amiko2k20@aol.com
+    password: password12345
+
+    email: xandro@aol.com
+    password: password12345
+
 ## 5. Usage
 
 This is an API and full stack code that runs a tech related blog. It runs on an express server using Sequelize models that interact with a MySQL database.
 
-The user can sign up for an account, to create and delete posts, and make commnets on posts. 
+The user can sign up for an account, to create, delete and update posts, and make commnets on posts. 
 
 ## 6. Support
 
-For support, users can contact tydamon@hotmail.com.
+For support, users can contact tydamon@hotmail.com. Links to my github and the app repo are also in the footer of the blog.
 
 ## 8. Contributing
 
