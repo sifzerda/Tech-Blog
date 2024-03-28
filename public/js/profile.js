@@ -4,7 +4,7 @@ const newFormHandler = async (event) => {
   const name = document.querySelector('#project-name').value.trim();
   const description = document.querySelector('#project-desc').value.trim();
 
-// fetch user's projects/posts
+  // fetch user's projects/posts
 
   if (name && description) {
     const response = await fetch(`/api/projects`, {
@@ -54,27 +54,30 @@ async function updateFormHandler(event) {
   const name = document.querySelector('#upname').value;
   const description = document.querySelector('#updesc').value;
 
-  const response = await fetch(`/api/projects/${id}`, {
-    method: 'PUT',
-    body: JSON.stringify({
-      project_id,
-      name,
-      description
-    }),
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  });
+  const id = window.location.toString().split("/")[window.location.toString().split("/").length - 1];
+
+
+  const response = await fetch(`/api/projects/${id}`,
+    {
+      method: 'PUT',
+      body: JSON.stringify({
+        project_id: id,
+        name,
+        description
+      }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
 
   if (response.ok) {
-    document.location.replace(`/new-post`);
+    document.location.replace(`/profile`);
   } else {
     alert(response.statusText);
   }
 };
 
 //document.querySelector('.update-project-form').addEventListener('submit', updateFormHandler);
-
 
 // ============ //
 
