@@ -43,11 +43,6 @@ const delButtonHandler = async (event) => {
 
 // update post ============================================ //
 
-
-
-
-
-
 async function updateFormHandler(event) {
   event.preventDefault();
 
