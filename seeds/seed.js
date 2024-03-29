@@ -5,7 +5,6 @@ const userData = require('./userData.json');
 const projectData = require('./projectData.json');
 const commentData = require('./commentData.json');
 
-
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
@@ -29,7 +28,6 @@ const seedDatabase = async () => {
       project_id: projects[Math.floor(Math.random() * projects.length)].id,
     });
   }
-
 
   process.exit(0);
 };

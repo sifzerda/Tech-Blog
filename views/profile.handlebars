@@ -25,26 +25,28 @@
   </div>
 
   {{#if projects.length}}
-  <div class="col-md-6 project-list">
-    <h3>Current Posts:</h3>
+  <div class="col-md-6">
+<h2 class="headbar">Current Posts</h2>
 
     {{#each projects as |project|}}
-    <div class="row mb-2">
-      <div class="col-md-9">
+ 
+      <div class="col-md-8">
         <h4><a class= "current-posts" href="/project/{{project.id}}">{{project.name}}</a></h4>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-4 project-list">
         <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
-      
+            </div>
     <!--/profile needs to be changed to the URL to edit a post (particular post with id)-->
-      <a class="btn btn-sm btn-warning" href= '/update-post/{{project.id}}'>UPDATE</a>
-      
-      
+     <div class="col-md-4">
+     <a class="btn btn-sm btn-warning" href= '/update/{{project.id}}'>UPDATE</a>
       </div>
-    </div>
+    
+
     {{/each}}
   </div>
   {{/if}}
 </div>
 
-<script src="/js/profile.js"></script>
+<br>
+
+<script src="./js/profile.js"></script>

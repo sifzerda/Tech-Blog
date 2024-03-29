@@ -41,41 +41,10 @@ const delButtonHandler = async (event) => {
   }
 };
 
-// update post ============================================ //
+document
+  .querySelector('.new-project-form')
+  .addEventListener('submit', newFormHandler);
 
-async function updateFormHandler(event) {
-  event.preventDefault();
-
-  const name = document.querySelector('#upname').value;
-  const description = document.querySelector('#updesc').value;
-
-  const id = window.location.toString().split("/")[window.location.toString().split("/").length - 1];
-
-
-  const response = await fetch(`/api/projects/${id}`,
-    {
-      method: 'PUT',
-      body: JSON.stringify({
-        project_id: id,
-        name,
-        description
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    });
-
-  if (response.ok) {
-    document.location.replace(`/profile`);
-  } else {
-    alert(response.statusText);
-  }
-};
-
-//document.querySelector('.update-project-form').addEventListener('submit', updateFormHandler);
-
-// ============ //
-
-document.querySelector('.new-project-form').addEventListener('submit', newFormHandler);
-
-document.querySelector('.project-list').addEventListener('click', delButtonHandler);
+document
+  .querySelector('.project-list')
+  .addEventListener('click', delButtonHandler);

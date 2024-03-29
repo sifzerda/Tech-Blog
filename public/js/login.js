@@ -23,5 +23,3 @@ console.log(email, password)
 };
 
 document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
-
-

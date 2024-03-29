@@ -73,7 +73,7 @@ ul.nav.nav-tabs {
 
 .btn:hover {
   color: #ffffff;
-  background-color:  #32d8f5;
+  background-color: #32d8f5;
 }
 
 .btn-outline-success {
@@ -88,12 +88,14 @@ ul.nav.nav-tabs {
 .btn.btn-danger {
   background-color: #ff2a58;
   color: #ffffff;
+ 
 }
 
 .btn.btn-danger:hover {
   background-color: #ffb6c6;
   color: #ffffff;
 }
+ 
 
 a.logon {
   padding: 15px;
@@ -109,7 +111,7 @@ a.logon:hover {
   border-color: rgb(0, 0, 0);
   border-radius: 5px;
   background-color: var(--light);
-font-weight: bold;
+  font-weight: bold;
 }
 
 .bg-light {
@@ -212,9 +214,9 @@ label {
 .btn.btn-primary:hover {
   background-color: #000;
   color: #ff5252;
-  border: 2px solid  #00f7ff;
+  border: 2px solid #00f7ff;
   box-shadow: 5px 5px 0px #ff5252;
-  text-shadow: 2px 2px  #00f7ff;
+  text-shadow: 2px 2px #00f7ff;
 }
 
 .btn.btn-primary-signup:active,
@@ -255,9 +257,9 @@ a.switch-ref {
 a.switch-ref:hover {
   background-color: #000;
   color: #ff5252;
-  border: 2px solid  #00f7ff;
+  border: 2px solid #00f7ff;
   box-shadow: 5px 5px 0px #ff5252;
-  text-shadow: 2px 2px  #00f7ff;
+  text-shadow: 2px 2px #00f7ff;
 }
 
 a.switch-ref:active {
@@ -278,11 +280,11 @@ textarea#comment-desc.form-input:focus {
 }
 
 a.current-posts {
-  color:  #255dd6;
+  color: #255dd6;
 }
 
 .btn.btn-sm {
-color: white;
+  color: white;
 }
 
 /* ============ footer ============ */
