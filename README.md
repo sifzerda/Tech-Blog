@@ -23,7 +23,7 @@
 
 Link to video demo of app:
 
-https://drive.google.com/file/d/15PPt4-SlKyVD8vsvZBR_J16PFBeR8vTc/view?usp=drive_link
+...
 
 ## 4. Installation
 
