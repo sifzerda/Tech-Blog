@@ -101,8 +101,6 @@ router.get('/comments', async (req, res) => {
   }
 });
 
-/////////////////////////////////////////////////////////////////
-// [one]
 // ============== get posts/projects by id to update ============= //
 
 // this creates the /update URL page
