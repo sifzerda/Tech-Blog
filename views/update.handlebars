@@ -5,16 +5,17 @@
     <form class="form update-project-form">
       <div class="form-group">
         <label for="project-name">Change Post title:</label>
-        <input class="form-input" type="text" id="upname" name="upname" />
+        <input class="form-input" type="text" id="upname" name="upname" value="{{name}}"/>
       </div>
       
       <div class="form-group">
         <label for="project-desc">Change Post content:</label>
-        <textarea class="form-input" id="updesc" name="updesc"></textarea>
+        <textarea class="form-input" id="updesc" name="updesc">{{description}}</textarea>
       </div>
       <div class="form-group">
         <button type="submit" class="btn btn-primary">Update</button>
       </div>
+      <input id="project-id" type="hidden" value="{{id}}"/>
     </form>
   </div>
 

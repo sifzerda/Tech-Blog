@@ -41,7 +41,7 @@ CODE EDITOR TERMINAL:
 - npm run seed
 - npm run watch or npm run start
 
-Pre-made accounts for logging in debugging purposes:
+Pre-made working accounts for logging in debugging purposes:
 
     email: sal@hotmail.com
     password: password12345
@@ -84,6 +84,7 @@ The author acknowledges and credits those who have contributed to this project, 
 -	Chee Ho Tai
 -	Pranita Shrestha
 -	Phil Loy 
+-   Megan Meyers
 
 ## 10. License
 

@@ -45,19 +45,15 @@ router.delete('/:id', withAuth, async (req, res) => {
 
  // [two]
 
- router.get('update/:id', withAuth, async (req, res) => {
+ router.put('/update/:id', withAuth, async (req, res) => {
   try {
-    const projectData = await Project.findOne({
+    const projectData = await Project.update(req.body,{
       where: {
         id: req.params.id,
       },
-      attributes: ['id', 'name', 'description', 'date_created'],
     });
 
-const project = projectData.get({ plain: true });
-res.render(`update`, { project, loggedIn: true, username: req.session.username });
-
-    res.status(200).json(project);
+    res.status(200).json(projectData);
   } catch (err) {
     res.status(500).json(err);
   }

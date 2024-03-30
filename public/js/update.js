@@ -9,10 +9,9 @@ const updateFormHandler = async (event) => {
     // fetch user's project by id
 
     //  if (name && description) {
-    const response = await fetch(`/api/projects/${id}`, {
+    const response = await fetch(`/api/projects/update/${id}`, {
         method: 'PUT',
         body: JSON.stringify({
-            post_id: id,
             name,
             description
         }),
