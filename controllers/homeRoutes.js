@@ -139,6 +139,12 @@ router.get('/update/:id', async (req, res) => {
 
 /////////////////////////////////////////////////////////////////////
 
+// ========================== pass current session user's name to hb =============== //
+router.get('/project/:id', function(req, res) {
+  res.render('project', {
+    name: req.session.name // Assuming user information is stored in req.user
+  });
+});
 
 // =========================== Logging in ====================== //
 
