@@ -21,9 +21,8 @@
 
 ## 3. Visuals
 
-Link to video demo of app:
-
-...
+Link to app deployed on Heroku
+https://young-brushlands-11834-82a452c6a69a.herokuapp.com/
 
 ## 4. Installation
 
