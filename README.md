@@ -58,7 +58,7 @@ Pre-made working accounts for logging in debugging purposes:
 
 This is an API and full stack code that runs a tech related blog. It runs on an express server using Sequelize models that interact with a MySQL database.
 
-The user can sign up for an account, to create, delete and update posts, and make commnets on posts. 
+The user can sign up for an account, to create, delete and update posts, and make comments on posts. 
 
 ## 6. Support
 
